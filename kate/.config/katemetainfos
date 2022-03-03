@@ -94,6 +94,18 @@ Mode Set By User=false
 Time=2022,2,25,2,42,36.939
 URL=file:///home/arik/.local/share/Steam/steamapps/common/Dead Cells/deadcells
 
+[file:///home/arik/dotfiles/picom/.config/picom/picom.conf]
+Bookmarks=
+Checksum=a19253102ca4ae9839f66dbb3db2b6e8dfbda627
+Encoding=UTF-8
+Highlighting=INI Files
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=INI Files
+Mode Set By User=true
+Time=2022,3,2,23,15,51.219
+URL=file:///home/arik/dotfiles/picom/.config/picom/picom.conf
+
 [file:///home/arik/grandma-house-passwd.txt]
 Bookmarks=
 Checksum=db94b548c9d25e20453e333188aea97779afd779

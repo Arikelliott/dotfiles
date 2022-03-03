@@ -67,7 +67,7 @@ Fallback Encoding=ISO 8859-15
 
 [KTextEditor Renderer]
 Animate Bracket Matching=false
-Auto Color Theme Selection=true
+Auto Color Theme Selection=false
 Color Theme=gruvbox Dark
 Font=Hack,10,-1,7,50,0,0,0,0,0
 Show Indentation Lines=false
@@ -141,7 +141,7 @@ State=AAAA/wAAAAD9AAAAAAAABVIAAAK+AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG
 ToolBarsMovable=Disabled
 
 [UiSettings]
-ColorScheme=Miriam
+ColorScheme=Default
 
 [filetree]
 editShade=87,88,24

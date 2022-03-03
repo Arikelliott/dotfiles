@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=miriam-konsole-theme
+ColorScheme=konsole-miriam-theme
 Font=MesloLGS Nerd Font Mono,10,-1,5,50,0,0,0,0,0
 
 [General]
