@@ -82,6 +82,30 @@ Mode Set By User=false
 Time=2022,2,25,4,44,4.175
 URL=file:///home/arik/.config/polybar/launch.sh
 
+[file:///home/arik/.config/xfce4/terminal/accels.scm]
+Bookmarks=
+Checksum=673bbea028b2d893faa989d24a388087537bc810
+Encoding=UTF-8
+Highlighting=Scheme
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Scheme
+Mode Set By User=false
+Time=2022,3,3,1,40,44.723
+URL=file:///home/arik/.config/xfce4/terminal/accels.scm
+
+[file:///home/arik/.config/xfce4/terminal/terminalrc]
+Bookmarks=
+Checksum=d5b041873adfe417ce49296e00da58310479fd82
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2022,3,3,1,40,50.413
+URL=file:///home/arik/.config/xfce4/terminal/terminalrc
+
 [file:///home/arik/.local/share/Steam/steamapps/common/Dead Cells/deadcells]
 Bookmarks=
 Checksum=071ff27d2380a0131c8119e38b8a27deee14bce9
