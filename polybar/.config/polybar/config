@@ -30,12 +30,24 @@ alert = #bd2c40
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 100%
+width = 100%:-20
 height = 30
-;offset-x = 1%
-;offset-y = 1%
+offset-x = 10
+offset-y = 10
 radius = 0
 fixed-center = false
+
+; To get a proper gap around polybar, this (override-redirect = true and wm-restack = i3)
+; along with the offset x and y and width 100%:-20 is necessary to make it work with i3gaps
+; and have a proper gap around the bar. It's also necessary in i3's config to set a "gaps top"
+; because otherwise the bar and i3's windows would float into each other. Basically it's
+; telling i3 to float polybar, then setting an offset for windows so they don't overlap.
+; For some reason offset-x/y don't work otherwise and float the tray instead?
+; And all of this is necessary because the normal trick to give polybar "gaps" is to set a
+; transparent border around it, but picom's drop shadows regard transparent elements of a
+; window as casting a shadow, and the shadow won't show through the transparent parts either.
+override-redirect = true
+wm-restack = i3
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -61,7 +73,8 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = mpd
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date
+;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -211,7 +224,8 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = #ccaaff
+; format-underline = #f90000
 label = %percentage:2%%
 
 [module/memory]
@@ -219,7 +233,8 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = #ccaaff
+; format-underline = #4bffdc
 label = %percentage_used%%
 
 [module/wlan]
@@ -228,7 +243,8 @@ interface = wlan0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+format-underline = #ccaaff
+; format-connected-underline = #9f78e1
 label-connected = %essid%
 
 format-disconnected =
@@ -272,7 +288,8 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = #ccaaff
+; format-underline = #0a6cf5
 
 label = %date% %time%
 
@@ -338,7 +355,8 @@ adapter = ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = #ccaaff
+; format-charging-underline = #ffb52a
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
@@ -370,7 +388,8 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f50a4d
+format-underline = #ccaaff
+; format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 

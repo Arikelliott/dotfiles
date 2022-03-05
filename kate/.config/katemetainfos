@@ -118,6 +118,42 @@ Mode Set By User=false
 Time=2022,2,25,2,42,36.939
 URL=file:///home/arik/.local/share/Steam/steamapps/common/Dead Cells/deadcells
 
+[file:///home/arik/dotfiles/i3/.config/i3/config]
+Bookmarks=
+Checksum=ff98617926c5ec22f9cf1ee361bf1f55c746b22d
+Encoding=UTF-8
+Highlighting=Python
+Highlighting Set By User=false
+Indentation Mode=python
+Mode=Python
+Mode Set By User=true
+Time=2022,3,3,17,26,32.373
+URL=file:///home/arik/dotfiles/i3/.config/i3/config
+
+[file:///home/arik/dotfiles/lightdm/lightdm-gtk-greeter.conf]
+Bookmarks=
+Checksum=011e3ed3bb82343147a8389a07a8838f256237a8
+Encoding=UTF-8
+Highlighting=INI Files
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=INI Files
+Mode Set By User=true
+Time=2022,3,3,21,18,9.91
+URL=file:///home/arik/dotfiles/lightdm/lightdm-gtk-greeter.conf
+
+[file:///home/arik/dotfiles/lightdm/lightdm-setter.sh]
+Bookmarks=
+Checksum=45564bb16eccb8382284046b247417194ea10759
+Encoding=UTF-8
+Highlighting=Bash
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Bash
+Mode Set By User=false
+Time=2022,3,3,21,15,20.079
+URL=file:///home/arik/dotfiles/lightdm/lightdm-setter.sh
+
 [file:///home/arik/dotfiles/picom/.config/picom/picom.conf]
 Bookmarks=
 Checksum=a19253102ca4ae9839f66dbb3db2b6e8dfbda627

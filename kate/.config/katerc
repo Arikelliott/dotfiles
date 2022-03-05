@@ -68,7 +68,7 @@ Fallback Encoding=ISO 8859-15
 [KTextEditor Renderer]
 Animate Bracket Matching=false
 Auto Color Theme Selection=false
-Color Theme=gruvbox Dark
+Color Theme=Nord
 Font=Hack,10,-1,7,50,0,0,0,0,0
 Show Indentation Lines=false
 Show Whole Bracket Expression=false
