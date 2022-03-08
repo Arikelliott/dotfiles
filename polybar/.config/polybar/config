@@ -35,7 +35,8 @@ height = 30
 offset-x = 10
 offset-y = 10
 radius = 0
-fixed-center = false
+; fixed-center sets whether the middle modules of the bar are centered or not.
+fixed-center = true
 
 ; To get a proper gap around polybar, this (override-redirect = true and wm-restack = i3)
 ; along with the offset x and y and width 100%:-20 is necessary to make it work with i3gaps
@@ -67,13 +68,15 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-0 = "Fantasque Sans Mono Nerd Font:pixelsize=12;1"
+font-1 = "unifont:fontformat=truetype:size=8:antialias=false;0"
+font-2 = "feather:pixelsize=10;0"
 
 modules-left = i3
-modules-center = mpd
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date
+modules-center = xwindow
+modules-right = pulseaudio wlan eth battery cpu temperature date
+;modules-left = i3
+;modules-center = mpd
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
@@ -153,7 +156,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = #000
@@ -222,7 +225,8 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+;format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #ccaaff
 ; format-underline = #f90000
@@ -283,8 +287,8 @@ interval = 5
 date =
 date-alt = " %Y-%m-%d"
 
-time = %H:%M
-time-alt = %H:%M:%S
+time = %I:%M
+time-alt = %I:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
@@ -297,11 +301,13 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+label-volume = aud %percentage%%
+# label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
 label-muted-foreground = #666
+label-volume-font = 1
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -324,8 +330,10 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+label-volume = aud %percentage%%
+# label-volume = VOL
 label-volume-foreground = ${root.foreground}
+
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}

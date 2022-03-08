@@ -1,5 +1,3 @@
-python main.py capital
-python main.py capital -s 1
 python main.py capital -s 1
 python main.py capital -s 1
 python main.py capital -s 1
@@ -497,4 +495,6 @@ exit
 cl
 exit
 exit
+exit
+cpio
 exit
