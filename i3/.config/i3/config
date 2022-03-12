@@ -123,6 +123,9 @@ bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
+# change focus left for switching tabs
+bindsym $mod+Shift+Return focus left
+
 # alternatively, you can use the cursor keys:
 # -- REMOVED TO CLEAR KEYBINDS FOR WORKSPACE SWITCHING --
 # bindsym $mod+Left focus left

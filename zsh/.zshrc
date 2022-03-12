@@ -38,3 +38,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 alias 'cl=clear'
 alias 'll=ls -Al --color=auto'
 alias neoftech=neofetch
+alias 'cbonsai=cbonsai -li --time=0.5'

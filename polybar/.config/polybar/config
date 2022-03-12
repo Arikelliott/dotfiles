@@ -18,15 +18,18 @@
 
 
 [colors]
-;background = ${xrdb:color0:#222}
 background = #222
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
-foreground-alt = #8ab
+; - foreground-alt seems to be the label/icon color
+foreground-alt = #ffb52a
 primary = #ffb52a
-secondary = #e60053
+secondary = #ffb52a
 alert = #bd2c40
+underline = #ffb52a
+tray-background = #dda439
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -62,15 +65,22 @@ border-right-size = 0
 border-top-size = 0
 border-color = #00000000
 
-padding-left = 0
-padding-right = 2
+padding-left = 1
+padding-right = 1
 
-module-margin-left = 1
-module-margin-right = 2
+module-margin-left = 0
+module-margin-right = 1
 
-font-0 = "Fantasque Sans Mono Nerd Font:pixelsize=12;1"
-font-1 = "unifont:fontformat=truetype:size=8:antialias=false;0"
-font-2 = "feather:pixelsize=10;0"
+; Main font = Fantasque Sans Mono Nerd Font
+font-0 = "Fantasque Sans Mono Nerd Font:pixelsize=11;1"
+; Font for volume bars, etc. = Unifont
+font-1 = "Unifont:fontformat=truetype:size=9:antialias=false;0"
+; Font for status modules = feather
+font-2 = "feather:pixelsize=11;0"
+; Currently unused = Sauce Code Pro Nerd Font
+font-3 = "Sauce Code Pro Nerd Font:pixelsize=18;4"
+; Font for i3 workspace icons = Iosevka Nerd Font Mono
+font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
 
 modules-left = i3
 modules-center = xwindow
@@ -80,8 +90,8 @@ modules-right = pulseaudio wlan eth battery cpu temperature date
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
-tray-padding = 2
-;tray-background = #0063ff
+tray-padding = 4
+tray-background = ${colors.tray-background}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -97,9 +107,12 @@ tray-padding = 2
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = ~ %title:0:30:...% ~
+format-underline= ${colors.primary}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -152,40 +165,77 @@ label-empty-padding = 2
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
-index-sort = true
+;format = <label-state> <label-mode>
+index-sort = false
+;index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
 label-mode-padding = 2
-label-mode-foreground = #000
+label-mode-foreground = #fff
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused = "●"
+;label-focused = %index%
+label-focused-font = 5
+label-focused-padding = 1
+label-focused-foreground = ${colors.primary}
+;label-focused-background = ${colors.background-alt}
+;label-focused-underline= ${colors.primary}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
-label-unfocused-padding = 2
+label-unfocused = "○"
+;label-unfocused = %index%
+label-unfocused-font = 5
+label-unfocused-padding = 1
+label-unfocused-foreground = ${colors.primary}
+;label-unfocused-background = #ff0000
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = "◐"
+;label-visible = %index%
+label-visible-font = 5
+label-visible-padding = 1
+;label-visible-padding = ${self.label-focused-padding}
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent = "◎"
+;label-urgent = %index%
+label-urgent-font = 5
+label-urgent-padding = 1
+label-urgent-foreground = ${colors.alert}
 
 ; Separator in between workspaces
 ; label-separator = |
 
+# the value format is <name-of-i3-workspace>;<icon>
+# just replace icon1 and icon2, etc. with your preferred Unicode symbol
+;ws-icon-0 = 1;I
+;ws-icon-1 = 2;II
+;ws-icon-2 = 3;III
+;ws-icon-3 = 4;IV
+;ws-icon-4 = 5;V
+;ws-icon-5 = 6;VI
+;ws-icon-6 = 7;VII
+;ws-icon-7 = 8;VIII
+;ws-icon-8 = 9;IX
+;ws-icon-9 = 10;X
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;ﭮ
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
 
 [module/mpd]
 type = internal/mpd
@@ -228,7 +278,7 @@ interval = 2
 ;format-prefix = " "
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #ccaaff
+format-underline = ${colors.underline}
 ; format-underline = #f90000
 label = %percentage:2%%
 
@@ -237,7 +287,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #ccaaff
+format-underline = ${colors.underline}
 ; format-underline = #4bffdc
 label = %percentage_used%%
 
@@ -247,9 +297,10 @@ interface = wlan0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-underline = #ccaaff
-; format-connected-underline = #9f78e1
-label-connected = %essid%
+format-underline = ${colors.underline}
+format-connected-underline = ${colors.underline}
+label-connected = %signal%%
+;label-connected = %essid%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -257,19 +308,20 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-font = 3
 
 [module/eth]
 type = internal/network
 interface = enp7s0
 interval = 3.0
 
-format-connected-underline = #55aa55
+format-connected-underline = ${colors.underline}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -290,9 +342,9 @@ date-alt = " %Y-%m-%d"
 time = %I:%M
 time-alt = %I:%M:%S
 
-format-prefix = 
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #ccaaff
+format-underline = ${colors.underline}
 ; format-underline = #0a6cf5
 
 label = %date% %time%
@@ -300,8 +352,12 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = aud %percentage%%
+format-volume = <label-volume>
+format-volume-prefix = " "
+format-volume-prefix-foreground = ${colors.foreground-alt}
+format-volume-underline = ${colors.underline}
+;format-volume = <label-volume> <bar-volume>
+label-volume = %percentage%%
 # label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
@@ -363,13 +419,13 @@ adapter = ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ccaaff
+format-charging-underline = ${colors.underline}
 ; format-charging-underline = #ffb52a
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
@@ -396,7 +452,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #ccaaff
+format-underline = ${colors.underline}
 ; format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
@@ -405,9 +461,9 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
