@@ -48,7 +48,7 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xterm"
+terminal = "xfce4-terminal"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -91,7 +91,7 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", xfce4-terminal }
+                                    { "open terminal", terminal }
                                   }
                         })
 
@@ -99,7 +99,7 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = rofi })
 
 -- Menubar configuration
-menubar.utils.terminal = xfce4-terminal -- Set the terminal for applications that require it
+menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
 -- Keyboard map indicator and switcher
@@ -562,3 +562,43 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- Autostart
+
+awful.spawn.with_shell(
+    'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
+    'xrdb -merge <<< "awesome.started:true";' ..
+    -- list each of your autostart commands, followed by ; inside single quotes, followed by ..
+    'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart"' -- https://github.com/jceb/dex
+    )
+
+
+-- Volume
+
+volnotify = {}
+volnotify.id = nil
+function volnotify:notify (msg)
+    self.id = naughty.notify({ text = msg, timeout = 1, replaces_id = self.id}).id
+end
+
+globalkeys = awful.util.table.join(
+   globalkeys,
+   awful.key({ }, "XF86AudioRaiseVolume",
+      function ()
+         awful.spawn(awesome_paths.config_dir ..
+                        "./scripts/osdvol.sh volup")
+         update_volume_widget()
+   end),
+   awful.key({ }, "XF86AudioLowerVolume",
+      function ()
+         awful.spawn(awesome_paths.config_dir ..
+                        "./scripts/osdvol.sh voldown")
+         update_volume_widget()
+   end),
+   awful.key({ }, "XF86AudioMute",
+      function ()
+         awful.spawn(awesome_paths.config_dir ..
+                        "./scripts/osdvol.sh mute")
+         update_volume_widget()
+   end)
+)
