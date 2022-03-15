@@ -84,7 +84,7 @@ font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
 
 modules-left = i3
 modules-center = xwindow
-modules-right = pulseaudio wlan eth battery cpu temperature date
+modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
 ;modules-left = i3
 ;modules-center = mpd
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
@@ -294,6 +294,31 @@ label = %percentage_used%%
 [module/wlan]
 type = internal/network
 interface = wlan0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-underline = ${colors.underline}
+format-connected-underline = ${colors.underline}
+label-connected = %signal%%
+;label-connected = %essid%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-font = 3
+
+[module/wlp12s0f3u2]
+type = internal/network
+interface = wlp12s0f3u2
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
