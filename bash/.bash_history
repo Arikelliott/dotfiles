@@ -1,7 +1,5 @@
 python main.py capital -s 1
 python main.py capital -s 1
-python main.py capital -s 1
-python main.py capital -s 1
 cl
 nano main.py 
 ll
@@ -497,4 +495,6 @@ exit
 exit
 exit
 cpio
+exit
+zsh
 exit
