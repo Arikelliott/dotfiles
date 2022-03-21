@@ -61,6 +61,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 alias 'cl=clear'
 alias 'll=ls -Al --color=auto'
 alias 'cbonsai=cbonsai -li --time=0.5'
+alias 'cat-token=cat ~/repos/.personal-access-token1'
 
 export VISUAL='nano'
 export EDITOR='nano'
