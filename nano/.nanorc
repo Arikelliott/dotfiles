@@ -1,143 +1,299 @@
-# Use auto-indentation 
-set autoindent 
- 
-# Backup files to filename~ 
-set backup 
- 
-# Use cut to end of line with ^K by default 
-# ERROR set cut 
- 
-# Enable ~/.nano_history for saving and reading search/replace strings. 
-# set historylog 
- 
-# Don't convert files from DOS/Mac format 
-set noconvert 
- 
-# Don't follow symlinks when writing files 
-# set nofollow 
- 
-# Don't display the help lists at the bottom of the screen 
-# set nohelp 
- 
-# Don't wrap text at all 
-set nowrap 
- 
-# Use smooth scrolling as the default 
-# ERROR set smooth 
- 
-# Use this spelling checker instead of the internal one.  This option 
-# does not properly have a default value. 
-set speller "aspell -c" 
- 
-# Allow nano to be suspended with ^Z 
-# set suspend 
- 
-# Use this tab size instead of the default; it must be greater than 0 
-# set tabsize 8 
- 
-# Save automatically on exit, don't prompt 
-# set tempfile 
- 
-# Enable ~/.nano_history for saving and reading search/replace strings. 
-# set historylog 
- 
-# Disallow file modification, why would you want this in an rc file? ;) 
-# set view 
- 
-#Color Syntax Highlighting 
-syntax "c-file" "\.(c|h)$" 
-color red "\<[A-Z_]{2,}\>" 
-color green "\<(float|char|int|void|static|const|struct)\>" 
-color brightyellow "\<(if|while|do|else|case|switch)\>" 
-color brightcyan "^#(  )*(define|include|ifn?def|endif|elif|else|if)" 
-color brightyellow "<[^=       ]*>" ""(.|[^"])*"" 
-color brightyellow start=""(\\.|[^\"])*\\( |   )*$" end="^(\\.|[^\"])*"" 
-color brightblue "//.*" 
-color brightblue start="/\*" end="\*/" 
- 
-syntax "HTML" "\.html$" 
-color blue start="<" end=">" 
-color red "&[^;        ]*;" 
- 
-syntax "TeX" "\.tex$" 
-color green "\\.|\\[A-Za-z]*" 
-color magenta "[{}]" 
-color blue "%.*" 
- 
-syntax "mutt" 
-color green "^>.*" 
- 
-syntax "php" ".*/*.php$" 
-color brightwhite "\{|\}|\." 
-color red "('[^']*')" 
-color red "\"[^\"]*\"" 
-color brightblue "(\$([[:alpha:]_]|->)*)" 
-color brightgreen "((\$(([[:alpha:]_0-9])+\->)+)[[:alpha:]_0-9]+\()" 
-color yellow " (if|else if|else|return|case|break)" 
-color yellow "\|\||\?|!|\||&&|=|;|\(|\)" 
-color red "false|true" 
-color brightwhite "[[:space:]]+debug|[[:space:]]+echo|\$this\->debug" 
-color cyan "//.*" 
-color cyan start="/\*" end="\*/" 
- 
-syntax "groff" "\.ms$" "\.mm$" "\.me$" "\.tmac$" "^tmac." ".rof" 
-color cyan "^\.ds [^ ]*" 
-color cyan "^\.nr [^ ]*" 
-color brightmagenta "\\." 
-color brightmagenta "\\f." 
-color brightmagenta "\\f\(.." 
-color brightmagenta "\\s(\+|\-)?[0-9]" 
-color cyan "(\\|\\\\)n." 
-color cyan "(\\|\\\\)n\(.." 
-color cyan start="(\\|\\\\)n\[" end="]" 
-color brightgreen "^\. *[^ ]*" 
-color yellow "^\.\\\".*$" 
-color green "(\\|\\\\)\*." 
-color green "(\\|\\\\)\*\(.." 
-color green start="(\\|\\\\)\*\[" end="]" 
-color brightred "\\\(.." 
-color brightred start="\\\[" end="]" 
-color brightcyan "\\\\\$[1-9]" 
- 
-syntax "perl" "\.p[lm]$" 
-color red "\<(accept|alarm|atan2|bin(d|mode)|c(aller|h(dir|mod|op|own|root)|lose(dir)?|onnect|os|rypt)|d(bm(close|open)|efined|elete|ie|o|ump)|e(ach|of|val|x(ec|ists|it|p))|f(cntl|ileno|lock|ork)|get(c|login|peername|pgrp|ppid|priority|pwnam|(host|net|proto|serv)byname|pwuid|grgid|(host|net)byaddr|protobynumber|servbyport)|([gs]et|end)(pw|gr|host|net|proto|serv)ent|getsock(name|opt)|gmtime|goto|grep|hex|index|int|ioctl|join|keys|kill|last|length|link|listen|local(time)?|log|lstat|m|mkdir|msg(ctl|get|snd|rcv)|next|oct|open(dir)?|ord|pack|pipe|pop|printf?|push|q|qq|qx|rand|re(ad(dir|link)?|cv|do|name|quire|set|turn|verse|winddir)|rindex|rmdir|s|scalar|seek|seekdir|se(lect|mctl|mget|mop|nd|tpgrp|tpriority|tsockopt)|shift|shm(ctl|get|read|write)|shutdown|sin|sleep|socket(pair)?|sort|spli(ce|t)|sprintf|sqrt|srand|stat|study|substr|symlink|sys(call|read|tem|write)|tell(dir)?|time|tr|y|truncate|umask|un(def|link|pack|shift)|utime|values|vec|wait(pid)?|wantarray|warn|write)\>" 
-color magenta "\<(continue|else|elsif|do|for|foreach|if|unless|until|while|eq|ne|lt|gt|le|ge|cmp|x|my|sub|use|package|can|isa)\>" 
-color cyan start="[$@%]" end="( |\\W|-)" 
-color yellow "".*"|qq\|.*\|" 
-color white "[sm]/.*/" 
-color white start="(^use| = new)" end=";" 
-color green "#.*" 
-color yellow start="<< 'STOP'" end="STOP" 
- 
-# ERROR syntax "Java source" "\.java$" 
-# ERROR color green "\<(boolean|byte|char|double|float|int|long|new|short|this|transient|void)\>" 
-# ERROR color red "\<(break|case|catch|continue|default|do|else|finally|for|if|return|switch|throw|try|while)\>" 
-# ERROR color cyan "\<(abstract|class|extends|final|implements|import|instanceof|interface|native|package|private|protected|public|static|strictfp|super|synchronized|throws|volatile)\>" 
-# ERROR color red ""[^"]*"" 
-# ERROR color yellow "<(true|false|null)>" 
-# ERROR color blue "//.*" 
-# ERROR color blue start="/\*" end="\*/" 
-# ERROR color brightblue start="/\*\*" end="\*/" 
-# ERROR color brightgreen,brightgreen "[       ]+$" 
- 
-syntax "nanorc" "[\.]*nanorc$" 
-color white "^ *(set|unset).*$" 
-color cyan "^ *(set|unset) (autoindent|backup|const|cut|fill|keypad|multibuffer|noconvert|nofollow|nohelp|nowrap|operatingdir|preserve|quotestr|regexp|smooth|speller|suspend|tabsize|tempfile|historylog|view)" 
-color brightwhite "^ *syntax [^ ]*" 
-color brightblue "^ *set\>" "^ *unset\>" "^ *syntax\>" 
-color white "^ *color\>.*" 
-color yellow "^ *color (bright)?(white|black|red|blue|green|yellow|magenta|cyan)\>" 
-color magenta "^ *color\>" 
-color green "^#.*$" 
- 
-syntax "bash" "\.sh$" 
-color brightblack "#.*" 
-color brightyellow "\(" "\)" "\{" "\}" 
-color red "\<[A-Z_]{2,}\>" 
-color red "[\$\*\'\`\|\=]" 
-color brightblue "\[.*\]" 
-color green "\<-e\>" "\<-d\>" "\<-f\>" "\<-r\>" "\<-g\>" "\<-u\>" "\<-u\>" "\<-w\>" "\<-x\>" "\<-L\>" 
-color green "\<-eq\>" "\<-ne\>" "\<-gt\>" "\<-lt\>" "\<-ge\>" "\<-le\>" "\<-s\>" "\<-n\>" "\<-z\>" 
-color blue "\" "\" "\" "\" "\" "\" "\" "\" "\" 
-color blue "\" "\" "\" "\" "\" 
-color brightwhite "\.*"
+  ## Sample initialization file for GNU nano.
+  ##
+  ## Please note that you must have configured nano with --enable-nanorc
+  ## for this file to be read!  Also note that this file should not be in
+  ## DOS or Mac format, and that characters specially interpreted by the
+  ## shell should not be escaped here.
+  ##
+  ## To make sure a value is disabled, use "unset <option>".
+  ##
+  ## For the options that take parameters, the default value is given.
+  ## Other options are unset by default.
+  ##
+  ## Quotes inside string parameters don't have to be escaped with
+  ## backslashes.  The last double quote in the string will be treated as
+  ## its end.  For example, for the "brackets" option, ""')>]}" will match
+  ## ", ', ), >, ], and }.
+
+  ## Use auto-indentation.
+  # set autoindent
+
+  ## Backup files to filename~.
+  # set backup
+
+  ## The directory to put unique backup files in.
+  # set backupdir ""
+
+  ## Do backwards searches by default.
+  # set backwards
+
+  ## Use bold text instead of reverse video text.
+  # set boldtext
+
+  ## The characters treated as closing brackets when justifying
+  ## paragraphs.  They cannot contain blank characters.  Only closing
+  ## punctuation, optionally followed by closing brackets, can end
+  ## sentences.
+  ##
+  # set brackets ""')>]}"
+
+  ## Do case sensitive searches by default.
+  # set casesensitive
+
+  ## Constantly display the cursor position in the statusbar.  Note that
+  ## this overrides "quickblank".
+  # set const
+
+  ## Use cut to end of line by default.
+  # set cut
+
+  ## Set the line length for wrapping text and justifying paragraphs.
+  ## If fill is 0 or less, the line length will be the screen width less
+  ## this number.
+  ##
+  # set fill -8
+
+  ## Enable ~/.nano_history for saving and reading search/replace strings.
+  set historylog
+
+  ## The opening and closing brackets that can be found by bracket
+  ## searches.  They cannot contain blank characters.  The former set must
+  ## come before the latter set, and both must be in the same order.
+  ##
+  # set matchbrackets "(<[{)>]}"
+
+  ## Use the blank line below the titlebar as extra editing space.
+  # set morespace
+
+  ## Enable mouse support, if available for your system.  When enabled,
+  ## mouse clicks can be used to place the cursor, set the mark (with a
+  ## double click), and execute shortcuts.  The mouse will work in the X
+  ## Window System, and on the console when gpm is running.
+  ##
+  # set mouse
+
+  ## Allow multiple file buffers (inserting a file will put it into a
+  ## separate buffer).  You must have configured with --enable-multibuffer
+  ## for this to work.
+  ##
+  # set multibuffer
+
+  ## Don't convert files from DOS/Mac format.
+  # set noconvert
+
+  ## Don't follow symlinks when writing files.
+  # set nofollow
+
+  ## Don't display the helpful shortcut lists at the bottom of the screen.
+  # set nohelp
+
+  ## Don't add newlines to the ends of files.
+  # set nonewlines
+
+  ## Don't wrap text at all.
+  set nowrap
+
+  ## Set operating directory.  nano will not read or write files outside
+  ## this directory and its subdirectories.  Also, the current directory
+  ## is changed to here, so any files are inserted from this dir.  A blank
+  ## string means the operating directory feature is turned off.
+  ##
+  # set operatingdir ""
+
+  ## Preserve the XON and XOFF keys (^Q and ^S).
+  # set preserve
+
+  ## The characters treated as closing punctuation when justifying
+  ## paragraphs.  They cannot contain blank characters.  Only closing
+  ## punctuation, optionally followed by closing brackets, can end
+  ## sentences.
+  ##
+  # set punct "!.?"
+
+  ## Do quick statusbar blanking.  Statusbar messages will disappear after
+  ## 1 keystroke instead of 26.  Note that "const" overrides this.
+  ##
+  # set quickblank
+
+  ## The email-quote string, used to justify email-quoted paragraphs.
+  ## This is an extended regular expression if your system supports them,
+  ## otherwise a literal string.  Default:
+  # set quotestr "^([ 	]*[#:>\|}])+"
+  ## if you have extended regular expression support, otherwise:
+  # set quotestr "> "
+
+  ## Fix Backspace/Delete confusion problem.
+  # set rebinddelete
+
+  ## Fix numeric keypad key confusion problem.
+  # set rebindkeypad
+
+  ## Do extended regular expression searches by default.
+  # set regexp
+
+  ## Make the Home key smarter.  When Home is pressed anywhere but at the
+  ## very beginning of non-whitespace characters on a line, the cursor
+  ## will jump to that beginning (either forwards or backwards).  If the
+  ## cursor is already at that position, it will jump to the true
+  ## beginning of the line.
+  # set smarthome
+
+  ## Use smooth scrolling as the default.
+  # set smooth
+
+  ## Use this spelling checker instead of the internal one.  This option
+  ## does not properly have a default value.
+  ##
+  # set speller "aspell -x -c"
+
+  ## Allow nano to be suspended.
+  set suspend
+
+  ## Use this tab size instead of the default; it must be greater than 0.
+  # set tabsize 8
+
+  ## Convert typed tabs to spaces.
+  # set tabstospaces
+
+  ## Save automatically on exit, don't prompt.
+  # set tempfile
+
+  ## Disallow file modification.  Why would you want this in an rcfile? ;)
+  # set view
+
+  ## The two single-column characters used to display the first characters
+  ## of tabs and spaces.  187 in ISO 8859-1 (0000BB in Unicode) and 183 in
+  ## ISO-8859-1 (0000B7 in Unicode) seem to be good values for these.
+  # set whitespace "  "
+
+  ## Detect word boundaries more accurately by treating punctuation
+  ## characters as parts of words.
+  # set wordbounds
+
+  ## Enable the new (EXPERIMENTAL) generic undo code, not just for line cuts
+  # set undo
+
+  ## Enable soft line wrapping (AKA full line display)
+  # set softwrap
+
+
+  ## Color setup
+  ##
+  ## Format:
+  ##
+  ## syntax "short description" ["filename regex" ...]
+  ##
+  ## The "none" syntax is reserved; specifying it on the command line is
+  ## the same as not having a syntax at all.  The "default" syntax is
+  ## special: it takes no filename regexes, and applies to files that
+  ## don't match any other syntax's filename regexes.
+  ##
+  ## color foreground,background "regex" ["regex"...]
+  ## or
+  ## icolor foreground,background "regex" ["regex"...]
+  ##
+  ## "color" will do case sensitive matches, while "icolor" will do case
+  ## insensitive matches.
+  ##
+  ## Valid colors: white, black, red, blue, green, yellow, magenta, cyan.
+  ## For foreground colors, you may use the prefix "bright" to get a
+  ## stronger highlight.
+  ##
+  ## To use multi-line regexes, use the start="regex" end="regex"
+  ## [start="regex" end="regex"...] format.
+  ##
+  ## If your system supports transparency, not specifying a background
+  ## color will use a transparent color.  If you don't want this, be sure
+  ## to set the background color to black or white.
+  ##
+  ## If you wish, you may put your syntaxes in separate files.  You can
+  ## make use of such files (which can only include "syntax", "color", and
+  ## "icolor" commands) as follows:
+  ##
+  ## include "/path/to/syntax_file.nanorc"
+  ##
+  ## Unless otherwise noted, the name of the syntax file (without the
+  ## ".nanorc" extension) should be the same as the "short description"
+  ## name inside that file.  These names are kept fairly short to make
+  ## them easier to remember and faster to type using nano's -Y option.
+  ##
+  ## All regexes should be extended regular expressions.
+
+  ## Key bindings
+  ## Please see nanorc(5) for more details on this
+  ##
+  ## Here are some samples to get you going
+  ##
+  # bind M-W nowrap main
+  # bind M-A casesens search
+  # bind ^S research main
+
+  ## Set this if your backspace key sends delete most of the time (2.1.3+)
+  # bind kdel backspace all
+
+
+  ## Nanorc files
+  include "/usr/share/nano/nanorc.nanorc"
+
+  ## C/C++
+  include "/usr/share/nano/c.nanorc"
+
+  ## Cascading Style Sheets
+  include "/usr/share/nano/css.nanorc"
+
+  ## Debian files
+  include "/usr/share/nano/debian.nanorc"
+
+  ## Gentoo files
+  include "/usr/share/nano/gentoo.nanorc"
+
+  ## HTML
+  include "/usr/share/nano/html.nanorc"
+
+  ## PHP
+  include "/usr/share/nano/php.nanorc"
+
+  ## TCL
+  include "/usr/share/nano/tcl.nanorc"
+
+  ## TeX
+  include "/usr/share/nano/tex.nanorc"
+
+  ## Quoted emails (under e.g. mutt)
+  include "/usr/share/nano/mutt.nanorc"
+
+  ## Patch files
+  include "/usr/share/nano/patch.nanorc"
+
+  ## Manpages
+  include "/usr/share/nano/man.nanorc"
+
+  ## Groff
+  include "/usr/share/nano/groff.nanorc"
+
+  ## Perl
+  include "/usr/share/nano/perl.nanorc"
+
+  ## Python
+  include "/usr/share/nano/python.nanorc"
+
+  ## Ruby
+  include "/usr/share/nano/ruby.nanorc"
+
+  ## Java
+  include "/usr/share/nano/java.nanorc"
+
+  ## AWK
+  include "/usr/share/nano/awk.nanorc"
+
+  ## Assembler
+  include "/usr/share/nano/asm.nanorc"
+
+  ## Bourne shell scripts
+  include "/usr/share/nano/sh.nanorc"
+
+  ## POV-Ray
+  include "/usr/share/nano/pov.nanorc"
+
+  ## XML-type files
+  include "/usr/share/nano/xml.nanorc"
