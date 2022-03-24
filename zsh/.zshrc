@@ -62,6 +62,7 @@ alias 'cl=clear'
 alias 'll=ls -Al --color=auto'
 alias 'cbonsai=cbonsai -li --time=0.5'
 alias 'cat-token=cat ~/repos/.personal-access-token1'
+alias 'gitstat=git status'
 
 export VISUAL='nano'
 export EDITOR='nano'
