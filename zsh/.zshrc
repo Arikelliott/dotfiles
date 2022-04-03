@@ -59,10 +59,13 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias 'cl=clear'
-alias 'll=ls -Al --color=auto'
+alias 'ls=ptls -A --color=auto'
+alias 'll=ptls -Al --color=auto'
 alias 'cbonsai=cbonsai -li --time=0.5'
 alias 'cat-token=cat ~/repos/.personal-access-token1'
 alias 'gitstat=git status'
+alias 'cp=ptcp'
+alias 'pwd=ptpwd'
 
 export VISUAL='nano'
 export EDITOR='nano'
