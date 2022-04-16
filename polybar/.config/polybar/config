@@ -353,13 +353,14 @@ ramp-signal-font = 3
 
 [module/eth]
 type = internal/network
-interface = enp7s0
+interface = enp9s0
 interval = 3.0
 
 format-connected-underline = ${colors.purple}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
+;label-connected = "connected"
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
