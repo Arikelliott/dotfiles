@@ -37,8 +37,8 @@ foreground-alt = ${xrdb:color15:#222}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-[bar/bar1]
-monitor = ${env:MONITOR:HDMI-A-0}
+[bar/example]
+;monitor = ${env:MONITOR:HDMI-1}
 width = 100%:-20
 height = 30
 offset-x = 10
@@ -87,8 +87,6 @@ font-2 = "feather:pixelsize=11;0"
 font-3 = "Sauce Code Pro Nerd Font:pixelsize=18;4"
 ; Font for i3 workspace icons = Iosevka Nerd Font Mono
 font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
-; Main font = Fantasque Sans Mono Nerd Font
-font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
 
 modules-left = i3
 modules-center = xwindow
@@ -111,116 +109,6 @@ tray-background = ${colors.aqua}
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-[bar/bar2]
-monitor = ${env:MONITOR:DisplayPort-5}
-width = 100%:-20
-height = 30
-offset-x = 10
-offset-y = 10
-radius = 0
-fixed-center = true
-
-override-redirect = true
-wm-restack = i3
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00t
-
-border--size = 0
-border-right-size = 0
-border-top-size = 0
-border-color = #00000000
-
-padding-left = 1
-padding-right = 1
-
-module-margin-left = 0
-module-margin-right = 1
-
-; Main font = Fantasque Sans Mono Nerd Font
-font-0 = "Fantasque Sans Mono Nerd Font:pixelsize=11;1"
-; Font for volume bars, etc. = Unifont
-font-1 = "Unifont:fontformat=truetype:size=9:antialias=false;0"
-; Font for status modules = feather
-font-2 = "feather:pixelsize=11;0"
-; Currently unused = Sauce Code Pro Nerd Font
-font-3 = "Sauce Code Pro Nerd Font:pixelsize=18;4"
-; Font for i3 workspace icons = Iosevka Nerd Font Mono
-font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
-; Main font = Fantasque Sans Mono Nerd Font
-font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
-
-modules-left = i3
-modules-center = xwindow
-modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
-
-tray-position = right
-tray-padding = 4
-tray-background = ${colors.aqua}
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-[bar/bar3]
-monitor = ${env:MONITOR:DisplayPort-6}
-width = 100%:-20
-height = 30
-offset-x = 10
-offset-y = 10
-radius = 0
-fixed-center = true
-
-override-redirect = true
-wm-restack = i3
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00t
-
-border--size = 0
-border-right-size = 0
-border-top-size = 0
-border-color = #00000000
-
-padding-left = 1
-padding-right = 1
-
-module-margin-left = 0
-module-margin-right = 1
-
-; Main font = Fantasque Sans Mono Nerd Font
-font-0 = "Fantasque Sans Mono Nerd Font:pixelsize=11;1"
-; Font for volume bars, etc. = Unifont
-font-1 = "Unifont:fontformat=truetype:size=9:antialias=false;0"
-; Font for status modules = feather
-font-2 = "feather:pixelsize=11;0"
-; Currently unused = Sauce Code Pro Nerd Font
-font-3 = "Sauce Code Pro Nerd Font:pixelsize=18;4"
-; Font for i3 workspace icons = Iosevka Nerd Font Mono
-font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
-; Main font = Fantasque Sans Mono Nerd Font
-font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
-
-modules-left = i3
-modules-center = xwindow
-modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
-
-tray-position = right
-tray-padding = 4
-tray-background = ${colors.aqua}
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -296,39 +184,39 @@ label-mode-foreground = #fff
 label-mode-background = ${colors.yellow}
 
 ; focused = Active workspace on focused monitor
-;label-focused = "●"
-label-focused = %index%
+label-focused = "●"
+;label-focused = %index%
 ;label-focused-font = 1
-label-focused-font = 6
+label-focused-font = 5
 label-focused-padding = 1
 label-focused-foreground = ${colors.green}
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.yellow}
+;label-focused-background = ${colors.background-alt}
+;label-focused-underline= ${colors.yellow}
 
 ; unfocused = Inactive workspace on any monitor
-;label-unfocused = "○"
-label-unfocused = %index%
+label-unfocused = "○"
+;label-unfocused = %index%
 ;label-unfocused-font = 1
-label-unfocused-font = 6
+label-unfocused-font = 5
 label-unfocused-padding = 1
 label-unfocused-foreground = ${colors.yellow}
 ;label-unfocused-background = #ff0000
 
 ; visible = Active workspace on unfocused monitor
-;label-visible = "◐"
-label-visible = %index%
+label-visible = "◐"
+;label-visible = %index%
 ;label-visible-font = 1
-label-visible-font = 6
+label-visible-font = 5
 label-visible-padding = 1
 ;label-visible-padding = ${self.label-focused-padding}
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 
 ; urgent = Workspace with urgency hint set
-;label-urgent = "◎"
-label-urgent = %index%
+label-urgent = "◎"
+;label-urgent = %index%
 ;label-urgent-font = 1
-label-urgent-font = 6
+label-urgent-font = 5
 label-urgent-padding = 1
 label-urgent-foreground = ${colors.red}
 
