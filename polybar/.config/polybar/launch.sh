@@ -10,3 +10,6 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 polybar -r bar1 &
 polybar -r bar2 &
 polybar -r bar3 &
+
+# test
+# touch /home/arik/polybar-startup-test.txt
