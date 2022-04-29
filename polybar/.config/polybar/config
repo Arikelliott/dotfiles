@@ -118,7 +118,7 @@ cursor-scroll = ns-resize
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [bar/bar2]
-monitor = ${env:MONITOR:DisplayPort-5}
+monitor = ${env:MONITOR:DisplayPort-1}
 width = 100%:-20
 height = 30
 offset-x = 10
@@ -173,7 +173,7 @@ cursor-scroll = ns-resize
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [bar/bar3]
-monitor = ${env:MONITOR:DisplayPort-6}
+monitor = ${env:MONITOR:DisplayPort-2}
 width = 100%:-20
 height = 30
 offset-x = 10
