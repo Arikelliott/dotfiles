@@ -7,9 +7,19 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bars
-polybar -r bar1 &
-polybar -r bar2 &
-polybar -r bar3 &
+
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar --reload bar1 &
+  done
+else
+  polybar --reload bar1 &
+fi
+
+# Launch bars legacy version - above script should launch bar on all monitors
+# polybar -r bar1 &
+# polybar -r bar2 &
+# polybar -r bar3 &
 
 # test
 # touch /home/arik/polybar-startup-test.txt

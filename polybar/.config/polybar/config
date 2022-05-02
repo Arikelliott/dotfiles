@@ -18,7 +18,9 @@
 
 
 [colors]
-background = ${xrdb:color0:#222}
+; background = ${xrdb:color0:#222}
+; background-alt = ${xrdb:color08:#222}
+background = ${xrdb:background:#222}
 background-alt = ${xrdb:color08:#222}
 red = ${xrdb:color1:#222}
 red-alt = ${xrdb:color9:#222}
@@ -32,13 +34,16 @@ purple = ${xrdb:color5:#222}
 purple-alt = ${xrdb:color13:#222}
 aqua = ${xrdb:color6:#222}
 aqua-alt = ${xrdb:color14:#222}
-foreground = ${xrdb:color7:#222}
+; foreground = ${xrdb:color7:#222}
+; foreground-alt = ${xrdb:color15:#222}
+foreground = ${xrdb:foreground:#222}
 foreground-alt = ${xrdb:color15:#222}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [bar/bar1]
-monitor = ${env:MONITOR:HDMI-A-0}
+; monitor = ${env:MONITOR:HDMI-A-0}
+monitor = ${env:MONITOR:}
 width = 100%:-20
 height = 30
 offset-x = 10
@@ -111,116 +116,6 @@ tray-background = ${colors.aqua}
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-[bar/bar2]
-monitor = ${env:MONITOR:DisplayPort-1}
-width = 100%:-20
-height = 30
-offset-x = 10
-offset-y = 10
-radius = 0
-fixed-center = true
-
-override-redirect = true
-wm-restack = i3
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00t
-
-border--size = 0
-border-right-size = 0
-border-top-size = 0
-border-color = #00000000
-
-padding-left = 1
-padding-right = 1
-
-module-margin-left = 0
-module-margin-right = 1
-
-; Main font = Fantasque Sans Mono Nerd Font
-font-0 = "Fantasque Sans Mono Nerd Font:pixelsize=11;1"
-; Font for volume bars, etc. = Unifont
-font-1 = "Unifont:fontformat=truetype:size=9:antialias=false;0"
-; Font for status modules = feather
-font-2 = "feather:pixelsize=11;0"
-; Currently unused = Sauce Code Pro Nerd Font
-font-3 = "Sauce Code Pro Nerd Font:pixelsize=18;4"
-; Font for i3 workspace icons = Iosevka Nerd Font Mono
-font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
-; Main font = Fantasque Sans Mono Nerd Font
-font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
-
-modules-left = i3
-modules-center = xwindow
-modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
-
-tray-position = right
-tray-padding = 4
-tray-background = ${colors.aqua}
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-[bar/bar3]
-monitor = ${env:MONITOR:DisplayPort-2}
-width = 100%:-20
-height = 30
-offset-x = 10
-offset-y = 10
-radius = 0
-fixed-center = true
-
-override-redirect = true
-wm-restack = i3
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00t
-
-border--size = 0
-border-right-size = 0
-border-top-size = 0
-border-color = #00000000
-
-padding-left = 1
-padding-right = 1
-
-module-margin-left = 0
-module-margin-right = 1
-
-; Main font = Fantasque Sans Mono Nerd Font
-font-0 = "Fantasque Sans Mono Nerd Font:pixelsize=11;1"
-; Font for volume bars, etc. = Unifont
-font-1 = "Unifont:fontformat=truetype:size=9:antialias=false;0"
-; Font for status modules = feather
-font-2 = "feather:pixelsize=11;0"
-; Currently unused = Sauce Code Pro Nerd Font
-font-3 = "Sauce Code Pro Nerd Font:pixelsize=18;4"
-; Font for i3 workspace icons = Iosevka Nerd Font Mono
-font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
-; Main font = Fantasque Sans Mono Nerd Font
-font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
-
-modules-left = i3
-modules-center = xwindow
-modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
-
-tray-position = right
-tray-padding = 4
-tray-background = ${colors.aqua}
 
 cursor-click = pointer
 cursor-scroll = ns-resize

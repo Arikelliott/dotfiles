@@ -66,6 +66,7 @@ alias 'cat-token=cat ~/repos/.personal-access-token1'
 alias 'gitstat=git status'
 alias 'cp=ptcp'
 alias 'pwd=ptpwd'
+alias 'snore=systemctl suspend'
 
 export VISUAL='nano'
 export EDITOR='nano'
