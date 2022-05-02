@@ -92,8 +92,10 @@ font-2 = "feather:pixelsize=11;0"
 font-3 = "Sauce Code Pro Nerd Font:pixelsize=18;4"
 ; Font for i3 workspace icons = Iosevka Nerd Font Mono
 font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
-; Main font = Fantasque Sans Mono Nerd Font
+; font = Fantasque Sans Mono Nerd Font
 font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
+; font = Cartograph Nerd Font
+font-6 = "CartographCF Nerd Font:pixelsize=10;1"
 
 modules-left = i3
 modules-center = xwindow
@@ -125,6 +127,7 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = ~ %title:0:30:...% ~
+label-font = 7
 format-underline= ${colors.yellow}
 
 [module/xkeyboard]
