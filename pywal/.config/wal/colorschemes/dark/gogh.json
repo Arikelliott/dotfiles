@@ -12,15 +12,15 @@
             "color4":"#blue",
             "color5":"#magenta",
             "color6":"#cyan",
-            "color7":"#lightgrey",
-            "color8":"#darkgrey",
-            "color9":"#darkred",
-            "color10":"#darkgreen",
-            "color11":"#darkyellow",
-            "color12":"#darkblue",
-            "color13":"#darkmagenta",
-            "color14":"#darkcyan",
-            "color15":"#white"
+            "color7":"#white",
+            "color8":"#dark black",
+            "color9":"#dark red",
+            "color10":"#dark green",
+            "color11":"#dark yellow",
+            "color12":"#dark blue",
+            "color13":"#dark magenta",
+            "color14":"#dark cyan",
+            "color15":"#dark white"
 
             }
         }
