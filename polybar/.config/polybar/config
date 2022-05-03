@@ -22,6 +22,9 @@
 ; background-alt = ${xrdb:color08:#222}
 background = ${xrdb:background:#222}
 background-alt = ${xrdb:color08:#222}
+;trans-background = #eeffffff
+black = ${xrdb:color0:#222}
+black-alt = ${xrdb:color8:#222}
 red = ${xrdb:color1:#222}
 red-alt = ${xrdb:color9:#222}
 green = ${xrdb:color2:#222}
@@ -34,6 +37,8 @@ purple = ${xrdb:color5:#222}
 purple-alt = ${xrdb:color13:#222}
 aqua = ${xrdb:color6:#222}
 aqua-alt = ${xrdb:color14:#222}
+white = ${xrdb:color7:#222}
+white-alt = ${xrdb:color15:#222}
 ; foreground = ${xrdb:color7:#222}
 ; foreground-alt = ${xrdb:color15:#222}
 foreground = ${xrdb:foreground:#222}
@@ -75,8 +80,9 @@ border--size = 0
 border-right-size = 0
 border-top-size = 0
 border-color = #00000000
+;border-color = ${colors.background}
 
-padding-left = 1
+padding-left = 0
 padding-right = 1
 
 module-margin-left = 0
@@ -96,8 +102,10 @@ font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
 font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
 ; font = Cartograph Nerd Font
 font-6 = "CartographCF Nerd Font:pixelsize=10;1"
+; Font for launcher icons = Iosevka Nerd Font Mono
+font-7 = "Iosevka:pixelsize=14;4"
 
-modules-left = i3
+modules-left = rofi-launcher i3
 modules-center = xwindow
 modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
 ;modules-left = i3
@@ -521,7 +529,7 @@ format-spacing = 1
 
 label-open = 
 label-open-foreground = ${colors.blue}
-label-close =  cancel
+label-close =  cancel
 label-close-foreground = ${colors.blue}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
@@ -540,6 +548,27 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/custom-menu]
+type = custom/text
+content = ⏻
+content-padding = 1
+content-margin = 1
+content-font = 6
+;content-background = ${colors.black-alt}
+
+click-left = sh /home/arik/dotfiles/scripts/launch-kitty.sh
+
+[module/rofi-launcher]
+type = custom/text
+content = -menu-
+content-font = 7
+content-foreground = ${colors.background}
+content-background = ${colors.blue}
+content-padding = 1
+;content-underline = ${colors.blue-alt}
+
+click-left = rofi -modi drun,run -show drun
 
 [settings]
 screenchange-reload = true
