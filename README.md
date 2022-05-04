@@ -1,8 +1,20 @@
-# ~ My Dots ~
+<div align="center">
+	
+	- ~ = ~ = ~ = ~ = ~ = ~ = ~ -
+	  .     .         .         
+	  |     |    ,- o |         
+	,-| ,-. |-   |  . | ,-. ,-. 
+	| | | | |    |- | | |-' `-. 
+	`-' `-' `-'  |  ' ' `-' `-' 
+	-'  
+	- ~ = ~ = ~ = ~ = ~ = ~ = ~ -
+-----
+	
+</div>
+
 Currently working on my own aesthetic Linux rice. At the moment I'm using i3wm, though I may try other WMs and DEs in the future.
 
 NOTE: My setup is designed with my computer and choice of programs in mind. It may not work for everyone. That said, one of my main goals with my dotfile repo is to provide a comprehensive guide to installing all the pieces so you can get similar results, or learn to do things how you want and have an easier time than I did.
-
 
 ## Edit log and goals:
 My current goals are as follows:
