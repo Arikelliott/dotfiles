@@ -1,9 +1,9 @@
 (defwindow example
            :monitor 0
-           :geometry (geometry :x "0%"
+           :geometry (geometry :x "20%"
                                :y "20px"
-                               :width "90%"
-                               :height "30px"
+                               :width "30%"
+                               :height "80px"
                                :anchor "top center")
            :stacking "fg"
            :reserve (struts :distance "40px" :side "top")
