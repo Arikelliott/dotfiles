@@ -101,7 +101,7 @@ font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
 ; font = Fantasque Sans Mono Nerd Font
 font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
 ; font = Cartograph Nerd Font
-font-6 = "CartographCF Nerd Font:pixelsize=10;1"
+font-6 = "Futura Bk:pixelsize=12;2"
 ; Font for launcher icons = Iosevka Nerd Font Mono
 font-7 = "Iosevka:pixelsize=14;4"
 
