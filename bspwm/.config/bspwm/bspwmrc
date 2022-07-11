@@ -1,9 +1,15 @@
 #! /bin/sh
 
+# Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
+autorandr --load bspwm &
+picom &
+sh /home/arik/.config/polybar/launch.sh
 
+# Workspaces
 bspc monitor -d I II III IV V VI VII VIII IX X
 
+# Stuff
 bspc config border_width         2
 bspc config window_gap          12
 
