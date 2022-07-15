@@ -5,6 +5,18 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Enable p10k theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# Add third-party ZSH plugins
+# source ~/.config/zsh/plugins/
+source ~/.config/zsh/plugins/third-party/zsh-history-substring-search.zsh
+source ~/.config/zsh/plugins/third-party/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/plugins/third-party/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Add my own custom ZSH plugins
+source ~/.config/zsh/plugins/custom/zsh-ptsh-aliases.zsh
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.config/zsh/.histfile
 HISTSIZE=10000
@@ -20,8 +32,6 @@ compinit
 
 zstyle ':completion::complete:*' gain-privileges 1
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
 
 
 # Editor of choice
@@ -30,14 +40,9 @@ export EDITOR='nano'
 
 # Aliases
 alias 'cl=clear'
-alias 'plainls=ls'
-alias 'ls=ptls -A --color=auto'
-alias 'll=ptls -Alh --color=auto'
 alias 'cbonsai=cbonsai -li --time=0.5'
 alias 'cat-token=cat ~/repos/.personal-access-token1'
 alias 'gitstat=git status'
-alias 'cp=ptcp'
-alias 'pwd=ptpwd'
 alias 'snore=systemctl suspend'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
