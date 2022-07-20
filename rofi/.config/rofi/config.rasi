@@ -148,8 +148,10 @@ configuration {
 
 /* CUSTOM CODE */
 
+/* @theme "gruvbox-dark"
+
 /* Dark theme. */
 @import "~/.cache/wal/colors-rofi-dark"
 
 /* Light theme. */
-/* @import "~/.cache/wal/colors-rofi-light" */
+/* @import "~/.cache/wal/colors-rofi-light" */@theme "/home/arik/.config/rofi/themes/fancy.rasi"
