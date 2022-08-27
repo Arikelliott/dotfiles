@@ -155,3 +155,4 @@ configuration {
 
 /* Light theme. */
 /* @import "~/.cache/wal/colors-rofi-light" */@theme "/home/arik/.config/rofi/themes/fancy.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
