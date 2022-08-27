@@ -18,7 +18,8 @@ NOTE: My setup is designed with my computer and choice of programs in mind. It m
 
 ## Edit log and goals:
 My current goals are as follows:
-- Do my stylization to polybar, i3, etc.
+- ~~Do my stylization to polybar, i3, etc.~~
+- NEW plan: we're switching to AwesomeWM! i3 is quite solid as far as window managers go. That said, I feel like I keep hitting a point where i3, and the tools I use with it (polybar, etc) are too simple and lacking in features that I'm looking for. Awesome, so far, has met my expectations for a WM I'd want to switch to out of the box (unlike, say, BSPWM).
 - Learn eww widgets for different menu dropdowns (poweroff options, sound, time, internet, etc.)
 
 
