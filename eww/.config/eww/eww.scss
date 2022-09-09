@@ -1,11 +1,28 @@
-.example {
-    background-color: #3a3a3a;
-    color: #b0b4bc;
-    padding: 10px;
-    margin: 20px;
-    border-radius: 40px;
-    border-width: 2px;
-    border-color: #ff0000;
-    border-style: solid;
-    box-shadow: 5px 5px 5px #000000;
-  }
+
+
+/* * {
+  all: unset;
+} */
+
+@import '/home/arik/.cache/wal/colors.scss';
+
+
+
+
+
+
+.bob {
+  background-color: $background;
+  color: $foreground;
+  font-family: "Futura Bk";
+  /* font-weight: 600; */
+  font-size: 18px;
+  /* margin: 0px 10px 10px; */
+  /* padding: 10px;
+  margin: 20px;
+  border-radius: 40px;
+  border-width: 2px;
+  border-color: #ff0000;
+  border-style: solid;
+  box-shadow: 5px 5px 5px #000000; */
+}

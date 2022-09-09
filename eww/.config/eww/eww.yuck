@@ -1,12 +1,35 @@
-(defwindow example
-           :monitor 0
-           :geometry (geometry :x "20%"
-                               :y "20px"
-                               :width "30%"
-                               :height "80px"
-                               :anchor "top center")
-           :stacking "fg"
-           :reserve (struts :distance "40px" :side "top")
-           :windowtype "dock"
-           :wm-ignore false
-  "example content")
+(defwindow bob
+  :monitor 2
+  :geometry (geometry   :x "20%"
+                        :y "20px"
+                        :width "30%"
+                        :height "80px"
+                        :anchor "bottom left")
+  :stacking "fg"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "dock"
+  :wm-ignore false
+  "VSCodium")
+
+
+(defwindow joe
+  :monitor 2
+  :geometry (geometry   :x "0%"
+                        :y "20px"
+                        :width "90%"
+                        :height "30px"
+                        :anchor "top center")
+  :stacking "fg"
+  :reserve (struts :distance "40px" :side "bottom")
+  :windowtype "dock"
+  :wm-ignore false
+  (greeter  :text "Say hello!"
+            :name "Arik"))
+
+
+(defwidget greeter [?text name]
+  (box  :orientation "horizontal"
+        :halign "center"
+  text
+  (button :onclick "notify-send 'Greeetings' 'Hello, ${name}!'"
+    "Greet")))
