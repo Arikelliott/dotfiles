@@ -43,7 +43,7 @@ white-alt = ${xrdb:color15:#222}
 ; foreground-alt = ${xrdb:color15:#222}
 foreground = ${xrdb:foreground:#222}
 foreground-alt = ${xrdb:color15:#222}
-
+ 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [bar/bar1]
@@ -59,15 +59,16 @@ fixed-center = true
 
 ; To get a proper gap around polybar, this (override-redirect = true and wm-restack = i3)
 ; along with the offset x and y and width 100%:-20 is necessary to make it work with i3gaps
-; and have a proper gap around the bar. It's also necessary in i3's config to set a "gaps top"
+; and have a proper gap around the bar. It's also necessary in i3's configQ to set a "gaps top"
 ; because otherwise the bar and i3's windows would float into each other. Basically it's
 ; telling i3 to float polybar, then setting an offset for windows so they don't overlap.
 ; For some reason offset-x/y don't work otherwise and float the tray instead?
 ; And all of this is necessary because the normal trick to give polybar "gaps" is to set a
 ; transparent border around it, but picom's drop shadows regard transparent elements of a
 ; window as casting a shadow, and the shadow won't show through the transparent parts either.
-override-redirect = true
-wm-restack = i3
+
+; override-redirect = true
+; wm-restack = i3
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -105,7 +106,7 @@ font-6 = "Futura Bk:pixelsize=12;2"
 ; Font for launcher icons = Iosevka Nerd Font Mono
 font-7 = "Iosevka:pixelsize=14;4"
 
-modules-left = rofi-launcher i3
+modules-left = rofi-launcher i3 bspwm
 modules-center = xwindow
 modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
 ;modules-left = i3
@@ -168,20 +169,34 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.yellow}
-label-focused-padding = 2
+;label-focused-font = 1
+label-focused-font = 6
+label-focused-padding = 1
+label-focused-foreground = ${colors.green}
+;label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.green}
 
 label-occupied = %index%
-label-occupied-padding = 2
+;label-occupied-font = 1
+label-occupied-font = 6
+label-occupied-padding = 1
+label-occupied-foreground = ${colors.blue}
+;label-occupied-padding = ${self.label-focused-padding}
+label-occupied-background = ${self.label-focused-background}
+;label-occupied-underline = ${self.label-focused-underline}
 
 label-urgent = %index%!
-label-urgent-background = ${colors.red}
-label-urgent-padding = 2
+;label-urgent-font = 1
+label-urgent-font = 6
+label-urgent-padding = 1
+label-urgent-foreground = ${colors.red}
 
 label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+;label-empty-font = 1
+label-empty-font = 6
+label-empty-padding = 1
+label-empty-foreground = ${colors.yellow}
+;label-empty-background = #ff0000
 
 ; Separator in between workspaces
 ; label-separator = |

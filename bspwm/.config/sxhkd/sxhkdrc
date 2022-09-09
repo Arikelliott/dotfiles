@@ -4,7 +4,8 @@
 
 # terminal emulator
 super + Return
-	rofi -modi drun,run -show drun
+	sh /home/arik/dotfiles/rofi/.config/rofi/launcher/run.sh
+	# rofi -modi drun,run -show drun
 
 # program launcher
 super + @space
