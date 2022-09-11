@@ -2,17 +2,14 @@
 
 # Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
-sh 
+sh /home/arik/dotfiles/bspwm/.config/bspwm/scripts/bspwm-xrandr-setup.sh &
+picom --animations -b --config ~/.config/picom/picom.conf &
+pkill dunst; dunst &
+wal -R &
+sh /home/arik/dotfiles/polybar/.config/polybar/launch.sh &
 picom &
-
-# autorandr --load i3 &
-# sh /home/arik/.config/polybar/launch.sh &
-# picom --animations -b --config ~/.config/picom/picom.conf &
-# pkill dunst; dunst &
-# lxpolkit &
-# wal -R &
-# autotiling &
-# sh /home/arik/dotfiles/i3/.config/i3/startup-stuff.sh &
+sh /home/arik/dotfiles/bspwm/.config/bspwm/scripts/startup-stuff.sh &
+lxpolkit &
 
 
 
@@ -22,7 +19,7 @@ bspc monitor DP-1 -d V V VI
 bspc monitor DP-2 -d VII VIII IX X
 
 # Stuff
-bspc config border_width         0R
+bspc config border_width         0
 bspc config window_gap          10
 
 bspc config split_ratio          0.52
