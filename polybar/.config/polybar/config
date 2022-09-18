@@ -168,34 +168,38 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
-;label-focused-font = 1
-label-focused-font = 6
+label-focused = "●"
+;label-focused = %index%
+label-focused-font = 5
+;label-focused-font = 6
 label-focused-padding = 1
 label-focused-foreground = ${colors.green}
 ;label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.green}
+;label-focused-underline= ${colors.green}
 
-label-occupied = %index%
-;label-occupied-font = 1
-label-occupied-font = 6
+label-occupied = "●"
+;label-occupied = %index%
+label-occupied-font = 5
+;label-occupied-font = 6
 label-occupied-padding = 1
-label-occupied-foreground = ${colors.blue}
+label-occupied-foreground = ${colors.foreground}
 ;label-occupied-padding = ${self.label-focused-padding}
 label-occupied-background = ${self.label-focused-background}
 ;label-occupied-underline = ${self.label-focused-underline}
 
-label-urgent = %index%!
-;label-urgent-font = 1
-label-urgent-font = 6
+label-urgent = "◎"
+;label-urgent = %index%!
+label-urgent-font = 5
+;label-urgent-font = 6
 label-urgent-padding = 1
 label-urgent-foreground = ${colors.red}
 
-label-empty = %index%
-;label-empty-font = 1
-label-empty-font = 6
+label-empty = "○"
+;label-empty = %index%
+label-empty-font = 5
+;label-empty-font = 6
 label-empty-padding = 1
-label-empty-foreground = ${colors.yellow}
+label-empty-foreground = ${colors.foreground}
 ;label-empty-background = #ff0000
 
 ; Separator in between workspaces
