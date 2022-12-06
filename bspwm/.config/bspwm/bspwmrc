@@ -2,16 +2,17 @@
 
 # Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
-sh /home/arik/dotfiles/bspwm/.config/bspwm/scripts/bspwm-xrandr-setup.sh &
 picom --animations -b --config ~/.config/picom/picom.conf &
 pkill dunst; dunst &
 wal -R &
 sh /home/arik/dotfiles/polybar/.config/polybar/launch.sh &
 picom &
-sh /home/arik/dotfiles/bspwm/.config/bspwm/scripts/startup-stuff.sh &
 lxpolkit &
-polychromatic-tray-applet &
-sh /home/arik/scripts/kb-catppuccin.sh &
+ckb-next -b &
+#polychromatic-tray-applet &
+sh ~/dotfiles/rgb/rgb.sh on &
+#sh /home/arik/dotfiles/bspwm/.config/bspwm/scripts/bspwm-xrandr-setup.sh &
+sh /home/arik/dotfiles/bspwm/.config/bspwm/scripts/startup-stuff.sh &
 
 
 
@@ -19,8 +20,8 @@ sh /home/arik/scripts/kb-catppuccin.sh &
 bspc monitor HDMI-A-0 -d I II III
 bspc monitor DisplayPort-1 -d V V VI
 bspc monitor DisplayPort-0 -d VII VIII IX X
-bspc monitor DisplayPort-5 -d V V VI
-bspc monitor DisplayPort-6 -d VII VIII IX X
+#bspc monitor DisplayPort-5 -d V V VI
+#bspc monitor DisplayPort-6 -d VII VIII IX X
 
 # Stuff
 bspc config border_width         0

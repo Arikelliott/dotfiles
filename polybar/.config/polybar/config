@@ -108,7 +108,7 @@ font-7 = "Iosevka:pixelsize=14;4"
 
 modules-left = rofi-launcher i3 bspwm
 modules-center = xwindow
-modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
+modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date rgb-button
 ;modules-left = i3
 ;modules-center = mpd
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
@@ -390,7 +390,7 @@ ramp-signal-font = 3
 
 [module/eth]
 type = internal/network
-interface = enp9s0
+interface = nm-bridge
 interval = 3.0
 
 format-connected-underline = ${colors.purple}
@@ -588,6 +588,19 @@ content-padding = 1
 ;content-underline = ${colors.blue-alt}
 
 click-left = rofi -modi drun,run -show drun
+
+[module/rgb-button]
+type = custom/text
+content = rgb
+content-font = 7
+content-padding = 1
+;content-margin = 1
+content-foreground = ${colors.background}
+content-background = ${colors.purple}
+;content-underline = ${colors.blue-alt}
+
+click-left = sh ~/dotfiles/rgb/rgb.sh off
+click-right = sh ~/dotfiles/rgb/rgb.sh on
 
 [settings]
 screenchange-reload = true
