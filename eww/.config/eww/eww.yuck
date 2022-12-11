@@ -1,28 +1,28 @@
 (defwindow bob
-  :monitor 2
+  :monitor 0
   :geometry (geometry   :x "20%"
                         :y "20px"
                         :width "30%"
                         :height "80px"
-                        :anchor "bottom left")
+                        :anchor "bottom center")
   :stacking "fg"
   :reserve (struts :distance "40px" :side "top")
   :windowtype "dock"
-  :wm-ignore false
+  :wm-ignore true
   "VSCodium")
 
 
 (defwindow joe
-  :monitor 2
-  :geometry (geometry   :x "0%"
-                        :y "20px"
-                        :width "90%"
-                        :height "30px"
-                        :anchor "top center")
+  :monitor 0
+  :geometry (geometry   :x "-10px"
+                        :y "58px"
+                        :width "300px"
+                        :height "400px"
+                        :anchor "top right")
   :stacking "fg"
   :reserve (struts :distance "40px" :side "bottom")
-  :windowtype "dock"
-  :wm-ignore false
+  :windowtype "normal"
+  :wm-ignore true
   (greeter  :text "Say hello!"
             :name "Arik"))
 
@@ -30,6 +30,7 @@
 (defwidget greeter [?text name]
   (box  :orientation "horizontal"
         :halign "center"
+        :class "joe"
   text
   (button :onclick "notify-send 'Greeetings' 'Hello, ${name}!'"
     "Greet")))
