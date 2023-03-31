@@ -1,4 +1,4 @@
-if [ $TERM4 = 'term-kitty' ]
+if [ $TERM = 'term-kitty' ]
 then
     alias ssh='kitty +kitten ssh'
 else
