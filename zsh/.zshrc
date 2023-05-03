@@ -27,6 +27,7 @@ source ~/.config/zsh/plugins/third-party/zsh-autosuggestions/zsh-autosuggestions
 source ~/.config/zsh/plugins/custom/zsh-ptsh-aliases.zsh
 source ~/.config/zsh/plugins/custom/wal-terminal-support.zsh
 source ~/.config/zsh/plugins/custom/kitty-terminal-support.zsh
+source ~/.config/zsh/plugins/custom/custom-variables.zsh
 
 # Add ZSH configurations (currently pulled from Manjaro's defaults)
 source ~/.config/zsh/external-configs/zsh-aliases

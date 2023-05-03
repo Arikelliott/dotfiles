@@ -9,3 +9,4 @@ xset s noblank
 xset -dpms
 
 numlockx
+ckb-next -b &

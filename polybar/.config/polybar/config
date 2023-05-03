@@ -625,7 +625,8 @@ content-padding = 1
 content-margin = 0
 ;content-underline = ${colors.blue-alt}
 
-click-left = rofi -modi drun,run -show drun
+;click-left = rofi -modi drun,run -show drun
+click-left = sh /home/arik/dotfiles/rofi/.config/rofi/launcher/run.sh
 
 [module/rgb-button]
 type = custom/text
