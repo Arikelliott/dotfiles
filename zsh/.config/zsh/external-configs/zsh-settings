@@ -15,8 +15,8 @@ _comp_options+=(globdots)
 zstyle ':completion::complete:*' gain-privileges 1
 
 # Editor of choice
-export VISUAL='nano'
-export EDITOR='nano'
+export VISUAL='vim'
+export EDITOR='vim'
 
 
 
