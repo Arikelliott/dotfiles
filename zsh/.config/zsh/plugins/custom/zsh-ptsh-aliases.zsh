@@ -13,4 +13,5 @@ else
     alias 'll=ptls -Alh --color=auto'
     alias 'cp=ptcp'
     alias 'pwd=ptpwd'
+    alias 'kitssh=kitty +kitten ssh'
 fi
