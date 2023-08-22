@@ -7,6 +7,7 @@ export DISPLAY=:0.0
 xset s off
 xset s noblank
 xset -dpms
+xsetroot -cursor_name left_ptr
 
 numlockx
 ckb-next -b &

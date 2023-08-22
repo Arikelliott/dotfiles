@@ -20,8 +20,10 @@ sh /home/arik/dotfiles/bspwm/.config/bspwm/scripts/startup-stuff.sh &
 bspc monitor HDMI-A-0 -d I II III IV V
 bspc monitor DisplayPort-1 -d VI VII VIII
 bspc monitor DisplayPort-0 -d IX X
-#bspc monitor DisplayPort-5 -d V V VI
 #bspc monitor DisplayPort-6 -d VII VIII IX X
+#bspc monitor DisplayPort-5 -d V V VI
+#bspc monitor HDMI-A-0 -d I II III IV V VI
+#bspc monitor DisplayPort-0 -d VII VIII IX X
 
 # Stuff
 bspc config border_width         0
