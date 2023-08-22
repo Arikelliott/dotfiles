@@ -11,3 +11,4 @@ gtk/.config/gtk-4.0/servers
 gtk/.config/gtk-3.0/bookmarks
 gtk/.config/gtk-3.0/bookmarks
 backups/backup-script/backup-script-variables.sh
+backups/backup-script/exclude.txt
