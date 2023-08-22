@@ -155,3 +155,4 @@ configuration {
 
 /* Dark theme. */
 @import "~/.cache/wal/colors-rofi-dark"
+/* @import "/home/arik/.config/rofi/themes/launchpad.rasi" */
