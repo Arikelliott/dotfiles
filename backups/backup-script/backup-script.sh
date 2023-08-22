@@ -15,4 +15,7 @@
 #       -a "-a: groups all these options -rlptgoD (recursive, links, perms, times, group, owner, devices)"
 # - Refer to "Differential backup on a week" section on archwiki
 
-rsync -e ssh /path/to/local/files user@ip:/path/to/backup/location
+# Variables
+source /home/arik/backup-script/backup-script-variables.sh
+
+rsync --quiet --delete -a -e ssh --exclude-from=exclude.txt /home/arik $remoteuser@$remoteip:$remotebackup
