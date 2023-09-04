@@ -12,6 +12,11 @@
 	
 </div>
 
+# NEW PLAN
+Okay so, ignore everything after this point for the moment. Hopefully I'll get back to sorting it out at some point... but right now, I'm heavily revamping everything. Hopefully this will be a "last window manager/configuration/etc I ever use" kind of change, at least for the foreseeable future. It looks like the tools I'm looking into right now have the ability to do everything I want them to do and much more (currently: Hyprland, eww widgets, possibly a launcher such as Rofi, etc).
+
+- - -
+
 Currently working on my own aesthetic Linux rice. At the moment I'm using i3wm, though I may try other WMs and DEs in the future.
 
 NOTE: My setup is designed with my computer and choice of programs in mind. It may not work for everyone. That said, one of my main goals with my dotfile repo is to provide a comprehensive guide to installing all the pieces so you can get similar results, or learn to do things how you want and have an easier time than I did.
