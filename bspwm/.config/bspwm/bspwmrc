@@ -10,7 +10,7 @@ picom &
 lxpolkit &
 ckb-next -b &
 #polychromatic-tray-applet &
-sh ~/dotfiles/rgb/rgb.sh on &
+sh ~/dotfiles/rgb/rgb.sh off &
 #sh /home/arik/dotfiles/bspwm/.config/bspwm/scripts/bspwm-xrandr-setup.sh &
 sh /home/arik/dotfiles/bspwm/.config/bspwm/scripts/startup-stuff.sh &
 

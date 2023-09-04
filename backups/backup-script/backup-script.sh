@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 # THINGS TO ADD
 #
@@ -18,4 +18,4 @@
 # Variables
 source /home/arik/backup-script/backup-script-variables.sh
 
-rsync --quiet --delete -a -e ssh --exclude-from=exclude.txt /home/arik $remoteuser@$remoteip:$remotebackup
+rsync --verbose --delete -a -e ssh /home/arik --exclude-from=/home/arik/backup-script/exclude.txt arik@192.168.1.3:/home/arik/mount/backup/arik-home/
