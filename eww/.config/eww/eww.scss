@@ -1,44 +1,35 @@
-
-
-/* * {
-  all: unset;
-} */
+// UNSET DEFAULT GTK CSS
+* { all: unset; }
 
 @import '/home/arik/.cache/wal/colors.scss';
 
 
 
 
-
-
-.joe {
-  background-color: $background;
+.bob {
+  padding: 0px;
+  margin: 0px;
+  background-image: linear-gradient(135deg, #33ccff, #00ff99);
   color: $foreground;
-  font-family: "Futura Bk";
-  /* font-weight: 600; */
-  font-size: 18px;
-  /* margin: 0px 10px 10px; */
-  /* padding: 10px;
-  margin: 20px;
-  border-radius: 40px;
-  border-width: 2px;
-  border-color: #ff0000;
+  font-size: 0px;
+  border-radius: 15px;
+  border-width: 0px;
+  border-color: #000000;
   border-style: solid;
-  box-shadow: 5px 5px 5px #000000; */
+  opacity: 1;
 }
 
-.frank {
-  background-color: $background;
-  color: $foreground;
-  font-family: "Futura Bk";
+.joe {
+  /* background-color: $background; */
+  color: purple;
+  font-family: "Open Sans";
   /* font-weight: 600; */
-  font-size: 18px;
-  /* margin: 0px 10px 10px; */
-  /* padding: 10px;
-  margin: 20px;
-  border-radius: 40px;
-  border-width: 2px;
-  border-color: #ff0000;
-  border-style: solid;
-  box-shadow: 5px 5px 5px #000000; */
+  font-size: 17px;
+  padding: 0px;
+  margin: 0px;
+}
+
+button {
+  background-color: purple;
+  color: yellow;
 }

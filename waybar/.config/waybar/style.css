@@ -1,0 +1,223 @@
+/*
+    --- WAYBAR CSS ---
+*/
+
+/* --- TABLE OF CONTENTS ---
+    - Set Defaults
+    - Module Regions
+    - Global Module Styles
+    - Workspaces
+    - Window
+    - Audio
+    - Network
+    - Battery
+    - Clock
+    - Tray
+    - Animations
+    - Cool Code Archive
+*/
+
+/* --- SET DEFAULTS --- */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Liga SFMono Nerd Font", "Iosevka", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #0F0F17;
+/*    border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+    color: white;
+}
+
+tooltip {
+    background: transparent;
+    color: rgba(0, 0, 0, 0);
+    border: 1px solid transparent;
+}
+tooltip label {
+        color: white;
+}
+
+/* --- MODULE REGIONS --- */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 0 10px;
+    border-radius: 0px;
+    /* background-color: #00ff99; */
+}
+
+.modules-left,
+.modules-right {
+    /* background-color: #0f0f0f; */
+}
+
+/* --- GLOBAL MODULE STYLES --- */
+#custom-launcher
+#workspaces,
+#window,
+#pulseaudio,
+#network,
+#clock,
+#battery,
+#tray {
+    /* background: #303030; */
+	margin: 2px 2px;
+    padding: 3px 9px;
+	border-radius: 17px;
+    /* box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.65);  */
+}
+
+
+#custom-launcher {
+    font-family: "Liga SFMono Nerd Font";
+    font-size: 20px;
+    color: #0F0F17;
+    background-image: linear-gradient(90deg, #04b0e9 0%, #6ddaff 50%, #04b0e9 100%);
+    background-size: 200%;
+    animation: gradient_1 2s linear infinite;
+    margin: 6px 0;
+    padding: 0 12px 0 5px;
+    border-radius: 4px;
+}
+
+/* #custom-launcher label {
+    background-image: linear-gradient(135deg, #33ccff, #00ff99);
+    animation: swoosh 2s ease-in; 
+} */
+
+/* --- WORKSPACES --- */
+/* Workspaces is the whole module. Button covers individual workspace buttons. Persistent is for empty workspaces. Active is for the currently active one. Hover is for mouse hover. */
+#workspaces {
+    margin: 4px 0px;
+    font-family: "Futura Std";
+    border: none;
+    padding: 5px 9px;
+    font-size: 0px;
+    font-style: normal;
+    /* background: greenyellow; */
+}
+
+#workspaces button {
+    margin: 1px 3px;
+    padding: 1px 2px;
+    background: rgb(255, 255, 255);
+    border: none;
+    border-radius: 16px;
+    transition: all 0.2s;
+}
+
+#workspaces button.persistent { 
+    background: rgb(121, 121, 121);
+}
+
+#workspaces button.active {
+    padding: 1px 11px;
+    background-image: linear-gradient(135deg, #33ccff, #00ff99);
+    animation: swoosh 2s ease-in; 
+/*    transition: all 0.2s; */
+/*    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682); */
+}
+
+#workspaces button:hover,
+#workspaces button.active:hover {
+    background-image: linear-gradient(135deg, #df57a6 0%, #6b57df 50%, #6b57df 50%, #df57a6 100%);
+    background-size: 200%;
+    animation: gradient_1 1s linear infinite;
+}
+
+/* --- WINDOW --- */
+/* For the module that displays the currently active window name */
+#window {
+    font-family: "FantasqueSansMono NF", "Victor Mono";
+    font-style: italic;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* --- AUDIO --- */
+#pulseaudio {
+    font-weight: 700;
+}
+
+#pulseaudio default{
+    color: red;
+}
+
+/* --- NETWORK --- */
+#network{
+}
+
+/* --- BATTERY --- */
+#battery {
+}
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* --- CLOCK --- */
+#clock {
+}
+
+/* --- SYSTEM TRAY --- */
+#tray { 
+}
+
+
+
+
+
+
+
+/* --- ANIMATIONS --- */
+
+/* Simple right to left scrolling animation */
+@keyframes gradient_1 {
+	0% {
+		background-position: 0% 200%;
+	}
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+/* Used by battery warning thing */
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+
+
+/* --- COOL CODE ARCHIVE --- */
+
+/* Code to make an animated shimmery gradient */
+/* #window {
+    background: #303030;
+    background-image: linear-gradient(135deg, #df57a6 0%, #6b57df 50%, #6b57df 50%, #df57a6 100%);
+    background-size: 200%;
+    animation: gradient_1 1s linear infinite;
+	margin: 4px;
+	border-radius: 16px;
+    border: solid 0px #cdd6f4;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.65); 
+} */

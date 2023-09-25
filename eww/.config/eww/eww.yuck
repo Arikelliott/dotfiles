@@ -1,36 +1,36 @@
-(defwindow bob
+(defwindow bob ; Sample comment after code
   :monitor 0
-  :geometry (geometry   :x "20%"
-                        :y "20px"
-                        :width "30%"
-                        :height "80px"
-                        :anchor "bottom center")
+  :geometry (geometry   :x "0px"
+                        :y "0px"
+                        :width "100%"
+                        :height "0px"
+                        :anchor "top center")
   :stacking "fg"
-  :reserve (struts :distance "40px" :side "top")
-  :windowtype "dock"
-  :wm-ignore true
-  "VSCodium")
+  :exclusive true
+  :focusable false
+  :namespace "eww"
+  (bar_widget)
+)
 
 
-(defwindow joe
-  :monitor 0
-  :geometry (geometry   :x "-10px"
-                        :y "58px"
-                        :width "300px"
-                        :height "400px"
-                        :anchor "top right")
-  :stacking "fg"
-  :reserve (struts :distance "40px" :side "bottom")
-  :windowtype "normal"
-  :wm-ignore true
-  (greeter  :text "Say hello!"
-            :name "Arik"))
 
 
-(defwidget greeter [?text name]
+(defwidget bar_widget []
   (box  :orientation "horizontal"
         :halign "center"
         :class "joe"
-  text
-  (button :onclick "notify-send 'Greeetings' 'Hello, ${name}!'"
-    "Greet")))
+  (button :onclick "notify-send 'Greeetings' 'Hello!'"
+    "Hi")
+  )
+)
+
+(defwidget bar_widget []
+  (box  :orientation "horizontal"
+        :halign "center"
+        :class "joe"
+  (button :onclick "notify-send 'Greeetings' 'Hello!'"
+    "Hi")
+  )
+)
+
+; Sample comment

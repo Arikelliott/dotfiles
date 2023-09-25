@@ -10,3 +10,10 @@ I'd like to add a future ./themes folder with different themes that can be swapp
 
 # TO-DO
 - Create and label all variables
+- Get a working bar (eww?)
+- Get a working launcher (rofi Wayland fork? https://aur.archlinux.org/packages/rofi-lbonn-wayland-git)
+
+
+
+# OTHER
+- A really slick window rules config: https://github.com/Zeioth/zeioth-hyprland-config/blob/0c83164e4ac001e4d437028bae65e276bb077a89/config.d/02-window-rules#L50

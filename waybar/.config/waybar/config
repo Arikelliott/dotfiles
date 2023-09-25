@@ -1,57 +1,202 @@
 {
-  "layer": "top",
-    "modules-left": ["custom/arch", "wlr/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery"],
-    "custom/arch": {
-      "format": "  ",
-      "tooltip": false,
-      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
-    },
-    "wlr/workspaces": {
-      "format": "{name}",
-      "format": "{icon}",
-      "tooltip": false,
-      "all-outputs": true,
+    "layer": "bottom", // Waybar at top Hyprland layer, will display over other windows
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 40, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    // "margin": "10 10 0 10",
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window", "custom/media"],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "network", "battery", "clock", "tray"],
+    // "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+    
+    
+    
+    
+    
+    // Modules configuration
 
+    "custom/launcher": {
+        "format": "",
+        // "on-click": "sh /home/arik/dotfiles/rofi/.config/rofi/launcher/run.sh",
+    },
+  
+    // NOTE: "persistent_workspaces" needs an UNDERLINE
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "warp-on-scroll": false,
+        "format": "",
+        "persistent_workspaces": {
+          "1": [ "DP-2" ],
+          "2": [ "DP-2" ],
+          "3": [ "DP-2" ],
+          "4": [ "HDMI-A-1" ],
+          "5": [ "HDMI-A-1" ],
+          "6": [ "HDMI-A-1" ],
+          "7": [ "HDMI-A-1" ],
+          "8": [ "DP-1" ],
+          "9": [ "DP-1" ],
+          "10": [ "DP-1" ],
+        },
+  //      "format-icons": {
+  //          "1": "",
+  //          "2": "",
+  //          "3": "",
+  //          "4": "",
+  //          "5": "",
+  //          "urgent": "",
+  //          "focused": "",
+  //          "default": ""
+  //      }
+    },
+
+
+
+    "hyprland/window": {
+        "format": "~  {title}",
+        "separate-outputs": false,
+    },
+
+
+  
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
     },
     "clock": {
-      "format": "<span color='#b4befe'> </span>{:%H:%M}",
+        // "timezone": "America/New_York",
+        "format": " {:%I:%M %p}",
+        "format-alt": "{:󰃭 %a %d, %m/%Y}",
+        "tooltip-format": ""
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
     },
     "backlight": {
-      "device": "intel_backlight",
-      "format": "<span color='#b4befe'>{icon}</span> {percent}%",
-      "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "pulseaudio": {
-      "format": "<span color='#b4befe'>{icon}</span> {volume}%",
-      "format-muted": "",
-      "tooltip": false,
-      "format-icons": {
-        "headphone": "",
-        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
-      },
-      "scroll-step": 1,
-    },
-    "bluetooth": {
-      "format": "<span color='#b4befe'></span> {status}",
-      "format-disabled": "", // an empty format will hide the module
-      "format-connected": "<span color='#b4befe'></span> {num_connections}",
-      "tooltip-format": "{device_enumerate}",
-      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
-    },
-    "network": {
-      "interface": "wlo1",
-      "format": "{ifname}",
-      "format-wifi": "<span color='#b4befe'> </span>{essid}",
-      "format-ethernet": "{ipaddr}/{cidr} ",
-      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
-      "tooltip": false,
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
-      "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
-      "format-icons": ["", "", "", "", "", "", "", "", "", ""],
-      "format-charging": "<span color='#b4befe'></span> {capacity}%",
-      "tooltip": false,
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
     },
-}
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": " {ipaddr}",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+
+        
+        "scroll-step": 5,
+            "format": "{icon} {volume}%",
+//        "format": "VOL: {volume}% {format-source}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": "mute  {icon}",
+        "format-muted": "mute",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol"
+  
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+  }
+  
+
+
+    //   character reference:
+    //   For "Liga SFMono Nerd Font":     
