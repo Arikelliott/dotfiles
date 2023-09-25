@@ -14,7 +14,7 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-/*	icon-theme: ;*/
+	icon-theme: "hicolor";
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
@@ -53,21 +53,19 @@ configuration {
 /*	normalize-match: false;*/
 /*	steal-focus: false;*/
 /*	application-fallback-icon: ;*/
-/*	refilter-timeout-limit: 300;*/
+/*	refilter-timeout-limit: 8192;*/
 /*	xserver-i300-workaround: false;*/
-/*	completer-mode: "recursivebrowser";*/
 /*	pid: "/run/user/1000/rofi.pid";*/
 /*	display-window: ;*/
+/*	display-windowcd: ;*/
 /*	display-run: ;*/
 /*	display-ssh: ;*/
 /*	display-drun: ;*/
 /*	display-combi: ;*/
 /*	display-keys: ;*/
 /*	display-filebrowser: ;*/
-/*	display-recursivebrowser: ;*/
 /*	kb-primary-paste: "Control+V,Shift+Insert";*/
 /*	kb-secondary-paste: "Control+v,Insert";*/
-/*	kb-secondary-copy: "Control+c";*/
 /*	kb-clear-line: "Control+w";*/
 /*	kb-move-front: "Control+a";*/
 /*	kb-move-end: "Control+e";*/
@@ -135,8 +133,6 @@ configuration {
 /*	kb-select-8: "Super+8";*/
 /*	kb-select-9: "Super+9";*/
 /*	kb-select-10: "Super+0";*/
-/*	kb-entry-history-up: "Control+Up";*/
-/*	kb-entry-history-down: "Control+Down";*/
 /*	ml-row-left: "ScrollLeft";*/
 /*	ml-row-right: "ScrollRight";*/
 /*	ml-row-up: "ScrollUp";*/
@@ -152,4 +148,11 @@ configuration {
       directories-first: true;
       sorting-method:    "name";
   }
+  icon {
+      theme: "hicolor";
+  }
 }
+
+/* Dark theme. */
+@import "~/.cache/wal/colors-rofi-dark"
+/* @import "/home/arik/.config/rofi/themes/launchpad.rasi" */
