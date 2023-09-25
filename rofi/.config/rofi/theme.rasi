@@ -3,25 +3,31 @@
  * Rofi version: 1.7.5+wayland2-dev
  **/
 * {
-    red:                         rgba ( 220, 50, 47, 100 % );
+    red:                         rgba ( 255, 255, 00, 100 % );
+    // red:                         rgba ( 220, 50, 47, 100 % );
     selected-active-foreground:  var(background);
-    lightfg:                     rgba ( 88, 104, 117, 100 % );
+    lightfg:                     rgba ( 255, 255, 255, 100 % );
+    // lightfg:                     rgba ( 88, 104, 117, 100 % );
     separatorcolor:              var(foreground);
     urgent-foreground:           var(red);
     alternate-urgent-background: var(lightbg);
-    lightbg:                     rgba ( 238, 232, 213, 100 % );
-    background-color:            transparent;
+    lightbg:                     rgba ( 255, 00, 00, 100 % );
+    // lightbg:                     rgba ( 238, 232, 213, 100 % );
+    background-color:            rgba ( 00, 00, 255, 100 % );
+    // background-color:            transparent;
     border-color:                var(foreground);
     normal-background:           var(background);
     selected-urgent-background:  var(red);
     alternate-active-background: var(lightbg);
     spacing:                     2;
-    blue:                        rgba ( 38, 139, 210, 100 % );
+    blue:                        rgba ( 255, 00, 255, 100 % );
+    // blue:                        rgba ( 38, 139, 210, 100 % );
     alternate-normal-foreground: var(foreground);
     urgent-background:           var(background);
     selected-normal-foreground:  var(lightbg);
     active-foreground:           var(blue);
-    background:                  rgba ( 253, 246, 227, 100 % );
+    background:                  rgba ( 00, 255, 00, 100 % );
+    // background:                  rgba ( 253, 246, 227, 100 % );
     selected-active-background:  var(blue);
     active-background:           var(background);
     selected-normal-background:  var(lightfg);
@@ -109,7 +115,7 @@ listview {
     border-color: var(separatorcolor);
     spacing:      2px ;
     fixed-height: 0;
-    border:       2px dash 0px 0px ;
+    border:       2px solid 0px 0px ;
 }
 scrollbar {
     width:        4px ;

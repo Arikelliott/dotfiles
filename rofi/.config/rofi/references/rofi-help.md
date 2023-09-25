@@ -1,7 +1,10 @@
 # ROFI HELP
+
 The output of `rofi -h` which includes all config and keyboard options, etc
 
-# ROFI -H OUTPUT:
+# ROFI -H
+
+```css
 rofi usage:
 	rofi [-options ...]
 
@@ -324,3 +327,4 @@ Global options:
 	-kb-select-10 [string]                  Select row 10
 		Super+0 (Default)
 	-kb-entry-history-up [st
+```

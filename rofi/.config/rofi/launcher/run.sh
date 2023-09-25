@@ -10,7 +10,7 @@ else
     # 
     rofi -show drun \
     -modi drun,run \
-    -icon-theme "Papirus" -show-icons
+    # -icon-theme "Papirus" -show-icons
     -theme /home/arik/dotfiles/rofi/.config/rofi/config.rasi
 fi
 
