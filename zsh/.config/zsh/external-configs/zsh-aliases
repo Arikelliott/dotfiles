@@ -1,9 +1,1 @@
 # Aliases
-alias 'cl=clear'
-alias 'cbonsai=cbonsai -li --time=0.5'
-alias 'cat-token=cat ~/repos/.personal-access-token1'
-alias 'gitstat=git status'
-alias 'snore=systemctl suspend'
-alias cp="cp -i"
-alias df='df -h'
-alias free='free -m'
