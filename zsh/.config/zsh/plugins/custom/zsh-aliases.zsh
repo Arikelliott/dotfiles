@@ -6,7 +6,7 @@
 alias 'kitssh=kitty +kitten ssh'
 # alias 'cl=clear' # Just use ctrl + L
 alias 'cbonsai=cbonsai -li --time=0.5'
-alias 'cat-token=cat ~/repos/.personal-access-token1'
+alias 'cat-token=cat ~/Documents/repos/.personal-access-token1'
 alias 'gitstat=git status'
 alias 'snore=systemctl suspend'
 alias cp="cp -i"
