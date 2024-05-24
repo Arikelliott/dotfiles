@@ -36,3 +36,5 @@ source ~/.config/zsh/plugins/custom/zsh-aliases.zsh
 source ~/.config/zsh/external-configs/zsh-keybindings
 source ~/.config/zsh/external-configs/zsh-options
 source ~/.config/zsh/external-configs/zsh-settings
+
+eval "$(zoxide init --cmd cd zsh)"

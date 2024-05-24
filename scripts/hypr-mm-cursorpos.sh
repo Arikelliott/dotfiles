@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Get current monitor name
 current_monitor=$(sh /home/arik/dotfiles/scripts/hypr-current-monitor.sh)

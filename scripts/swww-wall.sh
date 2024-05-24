@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Gets active display ID
 dp=$(sh /home/arik/dotfiles/scripts/hypr-current-monitor.sh)

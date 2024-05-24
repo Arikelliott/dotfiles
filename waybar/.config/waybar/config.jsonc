@@ -163,6 +163,7 @@
         
         "scroll-step": 5,
             "format": "{icon} {volume}%",
+//        "format": "VOL: {volume}% {format-source}",
         "format-bluetooth": "{volume}% {icon}",
         "format-bluetooth-muted": "mute  {icon}",
         "format-muted": "mute",

@@ -113,6 +113,10 @@ tooltip label {
 }
 
 #workspaces button.persistent { 
+    background: rgb(255, 255, 255);
+}
+
+#workspaces button.empty { 
     background: rgb(121, 121, 121);
 }
 
