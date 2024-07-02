@@ -13,6 +13,8 @@ source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Enable starship theme
+# eval "$(starship init zsh)"
 
 
 
@@ -35,6 +37,6 @@ source ~/.config/zsh/plugins/custom/zsh-aliases.zsh
 #source ~/.config/zsh/external-configs/zsh-aliases
 source ~/.config/zsh/external-configs/zsh-keybindings
 source ~/.config/zsh/external-configs/zsh-options
-source ~/.config/zsh/external-configs/zsh-settings
+source ~/.config/zsh/external-configs/zsh-settings # hmm
 
 eval "$(zoxide init --cmd cd zsh)"

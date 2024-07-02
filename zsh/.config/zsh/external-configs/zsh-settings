@@ -4,12 +4,12 @@ HISTSIZE=10000
 SAVEHIST=10000
 bindkey -e
 # End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/arik/.zshrc'
+# The following lines were added by compinstall # NOTE: I nuked this section because it was slowing down zsh
+# zstyle :compinstall filename '/home/arik/.zshrc'
 
-autoload -Uz compinit
-compinit
-_comp_options+=(globdots)
+# autoload -Uz compinit
+# compinit
+# _comp_options+=(globdots)
 # End of lines added by compinstall
 
 zstyle ':completion::complete:*' gain-privileges 1

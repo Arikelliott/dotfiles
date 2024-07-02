@@ -33,18 +33,18 @@ else
 fi
 
 # find and fd aliases
-if command -v fd &> /dev/null
-then
-	alias 'find=fd'
-else
-fi
+# if command -v fd &> /dev/null
+# then
+# 	alias 'find=fd'
+# else
+# fi
 
 # find and fd aliases
-if command -v rg &> /dev/null
-then
-	alias 'grep=rg'
-else
-fi
+# if command -v rg &> /dev/null
+# then
+# 	alias 'grep=rg'
+# else
+# fi
 
 # yazi alias
 function ya() {
