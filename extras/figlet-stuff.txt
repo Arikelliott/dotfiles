@@ -1,2 +1,0 @@
-Used figlet -f Shimrod for stuff
-List of extra installed fonts: https://github.com/xero/figlet-fonts
