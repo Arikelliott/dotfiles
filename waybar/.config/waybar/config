@@ -18,7 +18,7 @@
     // Modules configuration
 
     "custom/launcher": {
-        "format": "",
+        "format": "",
         // "on-click": "sh /home/arik/dotfiles/rofi/.config/rofi/launcher/run.sh",
     },
   
