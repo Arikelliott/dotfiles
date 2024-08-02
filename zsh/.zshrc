@@ -26,7 +26,7 @@ source ~/.config/zsh/plugins/third-party/zsh-syntax-highlighting/zsh-syntax-high
 source ~/.config/zsh/plugins/third-party/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Add my own custom ZSH plugins
-source ~/.config/zsh/plugins/custom/wal-terminal-support.zsh
+# source ~/.config/zsh/plugins/custom/wal-terminal-support.zsh # Setting Kitty to do it instead
 source ~/.config/zsh/plugins/custom/kitty-terminal-support.zsh
 source ~/.config/zsh/plugins/custom/custom-variables.zsh
 source ~/.config/zsh/plugins/custom/zsh-custom-keybinds.zsh
