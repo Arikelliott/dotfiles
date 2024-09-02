@@ -1,0 +1,5 @@
+# display format is [monitor name],[WidthxHeight@framerate],[position offset from top left corner],[scaling (1 = 100%)]
+monitor=desc:Microstep MSI MAG321CQR KA3H070C01109,2560x1440@144,1920x500,1 #DP-1
+monitor=desc:ASUSTek COMPUTER INC ASUS VP249 0x00040086,1920x1080@144,0x0,1 #DP-2
+monitor=desc:LG Electronics IPS235 Serial Number,1920x1080@60,0x1080,1 #HDMI-A-1
+#monitor=DP-3,1920x1080@60,2240x1940,1
