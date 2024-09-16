@@ -39,4 +39,9 @@ source ~/.config/zsh/external-configs/zsh-keybindings
 source ~/.config/zsh/external-configs/zsh-options
 source ~/.config/zsh/external-configs/zsh-settings # hmm
 
+
+
+# Support for Cool Retro Term
+source ~/.config/zsh/plugins/custom/crt-terminal-support.zsh 
+
 eval "$(zoxide init --cmd cd zsh)"
