@@ -1,5 +1,5 @@
 {
-    "layer": "top", // Waybar at top Hyprland layer, will display over other windows
+    "layer": "bottom", // Waybar at top Hyprland layer, will display over other windows
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 40, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
@@ -20,7 +20,7 @@
 
     "custom/launcher": {
         "format": "",
-        "on-click": "sh /home/arik/dotfiles/rofi/.config/rofi/launcher/run.sh",
+        // "on-click": "sh /home/arik/dotfiles/rofi/.config/rofi/launcher/run.sh",
     },
   
     // NOTE: "persistent_workspaces" needs an UNDERLINE
@@ -179,10 +179,9 @@
             "default": ["", "", ""]
         },
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-click-right": "exec kitty"
+        "on-click-right": "kitty"
   
     },
-
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
