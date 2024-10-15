@@ -23,4 +23,6 @@ const Bar = (/** @type {number} */ monitor) => Widget.Window({
 
 App.config({
     windows: [Bar(0)],
+    // this style attribute takes a full path to a css file
+    style: '/home/username/.config/ags/style.css',
 })
